@@ -13,8 +13,8 @@ A simple A3C algorithm for google research football
 **Parallel：**  采用pytorch中的multiprocess机制，多进程实现Agent采样。
 
 **Network：**
-用4个3*3卷积核完成特征提取，(16,72,96)->(32,5,6)，后接一个lstmcell，隐层输出结果分别通过两个全连接层输出策略π和值函数value。使用lstmcell出于输入state带有时间序列性质的考量，训练时发现效果似乎优于普通的全连接层。
-input(16,72,96)->[conv(3*3,padding=1)->relu]*4->lstmcell((32,5,6),512)->hidden(512)
+用4个(3,3)卷积核完成特征提取，(16,72,96)->(32,5,6)，后接一个lstmcell，隐层输出结果分别通过两个全连接层输出策略π和值函数value。使用lstmcell出于输入state带有时间序列性质的考量，训练时发现效果似乎优于普通的全连接层。
+input(16,72,96)->[conv((3,3),padding=1)->relu]*4->lstmcell((32,5,6),512)->hidden(512)
 
 hidden->linear(512,action.space.n)->π
 
