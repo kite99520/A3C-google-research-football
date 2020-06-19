@@ -46,7 +46,6 @@ hidden->linear(512,1)->value
 
 总的loss:
 
-![](http://chart.googleapis.com/chart?cht=tx&chl=$$L_{total}=L_{\pi}+L_{v}+\beta L_{reg}$$)
 
 ![](http://latex.codecogs.com/gif.latex?\\sigma=\sqrt{\frac{1}{n}{\sum_{k=1}^n(x_i-\bar{x})^2}})
 
