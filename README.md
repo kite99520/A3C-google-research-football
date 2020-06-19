@@ -24,7 +24,7 @@ hidden->linear(512,1)->value
 关于policy，采用GAE(generalized advantage estimator)，对优势函数A进行一定程度的加权作为GAE。
 
 
-![](http://chart.googleapis.com/chart?cht=tx&chl=$$A_t=\sum_{l=1}^{\infty}(\gamma\lambda)^l(r_t+\gamma V(s_{t+l+1}-V(s_{t+l})))$$)
+![](http://chart.googleapis.com/chart?cht=tx&chl=$$A_t=\sum_{l=1}^{\infty}(\gamma\lambda)^l(r_t+\gamma V(s_{t+l+1})-V(s_{t+l}))$$)
 
 
 ![](http://chart.googleapis.com/chart?cht=tx&chl=$$g=E[\sum_{t=1}^{\infty}A_t\nabla\log\pi_{\theta}(s|a)]$$)
@@ -47,6 +47,8 @@ hidden->linear(512,1)->value
 总的loss:
 
 ![](http://chart.googleapis.com/chart?cht=tx&chl=$$L_{total}=L_{\pi}+L_{v}+\beta L_{reg}$$)
+
+![](http://latex.codecogs.com/gif.latex?\\sigma=\sqrt{\frac{1}{n}{\sum_{k=1}^n(x_i-\bar{x})^2}})
 
 ## 实验环境与运行
 
