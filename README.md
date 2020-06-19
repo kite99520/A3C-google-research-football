@@ -39,6 +39,8 @@ hidden->linear(512,1)->value
 ## 实验环境与运行
 
 **gfootball环境配置**
+
+建议在colab中进行该项目
 ```
 !apt-get update
 !apt-get install libsdl2-gfx-dev libsdl2-ttf-dev
@@ -48,6 +50,7 @@ hidden->linear(512,1)->value
 !cd football && GFOOTBALL_USE_PREBUILT_SO=1 pip3 install .
 ```
 **目录**
+
 src文件夹中包含model.py、optimizer.py、process.py，分别描述神经网络配置、优化器设置和单个进程的训练算法。trained_models文件夹包含训练好的模型参数，其中params.pkl是γ=0.99是训练得到的结果，params2.pkl是γ=0.992的结果。
 
 **训练**
