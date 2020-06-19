@@ -54,7 +54,7 @@ src文件夹中包含model.py、optimizer.py、process.py，分别描述神经�
 ```
 !python train.py
 ```
-参数：
+
 ```
 --env_name  环境名称，默认'academy_3_vs_1_with_keeper'
 --lr  学习率，默认1e-4
@@ -78,7 +78,6 @@ src文件夹中包含model.py、optimizer.py、process.py，分别描述神经�
 ```
 !python test.py
 ```
-参数：
 ```
 --env_name  环境名称，默认'academy_3_vs_1_with_keeper'
 --load_path 加载模型参数的具体路径，如"/content/drive/My Drive/A3C-pytorch-master/trained_models/params2.pkl"
